@@ -81,9 +81,3 @@ Cuenta creada con ID: 1
 - Los datos se guardan en memoria (no hay base de datos ni archivos externos).
 - Se corrigieron errores de compilación (`System.out.print(s: ...)`) en la versión final.
 
----
-
-## ✨ Autor
-
-Desarrollado por **Sebastián Hoyos**  
-📅 Actualizado: Octubre 2025
