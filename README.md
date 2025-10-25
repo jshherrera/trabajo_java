@@ -1,73 +1,89 @@
-💰 Java App: Cuenta Bancaria – Nuevas Funcionalidades (POO)
-🧠 Objetivo
+# 🏦 Sistema Bancario en Java
 
-Aplicar los principios de Programación Orientada a Objetos (POO) en Java:
-Encapsulación, responsabilidad única, manejo de errores, apertura/cierre y dependencia invertida.
-Este proyecto amplía la aplicación Cuenta Bancaria añadiendo nuevas funcionalidades y una mejor separación de responsabilidades en el código.
+Este proyecto implementa un sistema bancario simple en **Java**, permitiendo crear cuentas, consultar saldos, realizar depósitos, retiros y transferencias entre cuentas.  
+Está diseñado para ejecutarse en consola y fue construido siguiendo principios básicos de **Programación Orientada a Objetos (POO)**.
 
-⚙️ Características principales
+---
 
-Creación de cuentas bancarias (corriente o de ahorros).
+## 📋 Características principales
 
-Depósitos y retiros con validaciones y excepciones personalizadas.
+- Creación de cuentas bancarias.
+- Depósitos y retiros.
+- Transferencias entre cuentas.
+- Consulta de saldos.
+- Validación de errores y entradas incorrectas.
+- Persistencia temporal (los datos se mantienen mientras el programa está activo).
 
-Consulta de saldo individual y listado general de cuentas.
+---
 
-Manejo de errores con mensajes claros al usuario.
+## 🧱 Estructura del proyecto
 
-Organización modular del código: clases bien separadas (CuentaBancaria, Banco, InsufficientFundsException).
+```
+.
+├── Banco.java
+├── CuentaBancaria.java
+└── README.md
+```
 
-🧩 Estructura del proyecto
-📦 trabajo_java
- ┣ 📜 CuentaBancaria.java
- ┗ 📜 README.md
+### 🔹 `CuentaBancaria.java`
+Contiene la clase principal `CuentaBancaria` con el método `main`, que gestiona el menú de interacción del usuario y las operaciones bancarias.
 
-▶️ Ejecución del programa
+### 🔹 `Banco.java`
+Contiene la clase `Banco`, que administra las cuentas, permite buscarlas por ID y coordina las operaciones entre ellas.
 
-Abre la terminal en la carpeta del proyecto.
+---
 
-Compila el código con:
+## 🚀 Ejecución
 
-javac CuentaBancaria.java
+1. **Compila los archivos Java**:
+   ```bash
+   javac Banco.java CuentaBancaria.java
+   ```
 
+2. **Ejecuta el programa**:
+   ```bash
+   java CuentaBancaria
+   ```
 
-Ejecuta el programa con:
+3. **Sigue las instrucciones del menú interactivo** en consola para crear cuentas, depositar, retirar, transferir o consultar saldo.
 
-java CuentaBancaria
+---
 
+## 🧩 Ejemplo de uso
 
-En consola verás un menú como este:
+```
+==== Menú Principal ====
+1. Crear cuenta
+2. Consultar saldo
+3. Depositar
+4. Retirar
+5. Transferir
+6. Salir
+Seleccione una opción: 1
 
-********************
-1 - Crear cuenta
-2 - Consultar saldo
-3 - Retirar
-4 - Depositar
-5 - Listar cuentas
-6 - Salir
+Ingrese el nombre del titular: Juan Pérez
+Cuenta creada con ID: 1
+```
 
-🧮 Ejemplo de uso
+---
 
-Entrada:
+## ⚙️ Requisitos
 
-1
-Nombre del titular: Peter Parker
-Tipo (1=Corriente, 2=Ahorros): 2
-Saldo inicial: 500
+- Java JDK 11 o superior.
+- Editor de texto o IDE (VS Code, IntelliJ IDEA, NetBeans, etc.).
+- Consola de comandos.
 
+---
 
-Salida esperada:
+## 🧠 Notas
 
-Cuenta creada: ID:2 - Peter Parker (AHORROS) - Saldo: 500.00
+- El programa utiliza `Optional<CuentaBancaria>` para manejar cuentas inexistentes sin causar errores.
+- Los datos se guardan en memoria (no hay base de datos ni archivos externos).
+- Se corrigieron errores de compilación (`System.out.print(s: ...)`) en la versión final.
 
+---
 
-Luego puedes consultar, depositar o retirar según el ID de cuenta.
+## ✨ Autor
 
-🚨 Manejo de excepciones
-
-Si el monto ingresado es negativo o cero → se lanza IllegalArgumentException.
-
-Si el saldo es insuficiente → se lanza InsufficientFundsException.
-
-Si el ID no existe o es inválido → mensaje claro en consola.
-
+Desarrollado por **Sebastián Hoyos**  
+📅 Actualizado: Octubre 2025
